@@ -1,0 +1,152 @@
+
+
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+  
+    --white: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+   
+  body {
+    align-items: center;
+    color: white;
+    background: var(--main-background);
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  p {
+    color: var(--main-paragraph);
+    line-height: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-top: 4.5rem;
+    text-align: center;
+  }
+  
+  li {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  
+  .card {
+    background: var(--card-background);
+    border-radius: 0.5rem;
+    display: flex;
+    overflow: hidden;
+    width: clamp(700px, 80%, 1100px);
+  }
+  
+  .card-content {
+    padding: 7%;
+    width: 50%;
+  }
+  
+  .purple-text {
+    color: var(--accent);
+  }
+  
+  .stats-heading {
+    color: var(--stat-headings);
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+  }
+  
+  .main-image-block {
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 50%;
+  }
+  
+  .main-image {
+    height: 100%;
+    min-width: 100%;
+    vertical-align: top;
+  }
+  
+  .purple-layer {
+    background: var(--accent);
+    height: 100%;
+    left: 0;
+    opacity: 50%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .attribution {
+    font-size: 11px;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  @media (max-width: 720px) {
+    h1 {
+      font-size: 1.75rem;
+    }
+  
+    ul {
+      flex-direction: column;
+      padding-top: 2.5rem;
+    }
+  
+    li:nth-child(2),
+    li:nth-child(3) {
+      padding-top: 2rem;
+    }
+  
+    .card {
+      flex-direction: column;
+      margin-top: 4rem;
+      width: 90%;
+    }
+  
+    .card-content {
+      order: 2;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .main-image-block {
+      order: 1;
+      width: 100%;
+    }
+  
+    .main-image {
+      width: 100%;
+    }
+  
+    .attribution {
+      margin-bottom: 1rem;
+    }
+  }
